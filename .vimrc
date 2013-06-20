@@ -50,7 +50,7 @@ endif
 
 " 行为和外观设置
 set nocompatible                    " 关闭对 Vi 的兼容支持
-colorscheme slate                   " 设置配色方案为 slate, 我最喜欢了
+colorscheme torte                   " 设置配色方案为 torte
 set nobackup                        " 因为现在版本控制大行其道，所以不用备份了
 set ruler                           " 显示标尺
 set ignorecase                      " 搜索时忽略大小写
@@ -112,11 +112,15 @@ if (g:isgui)
         set nowrap
         set guioptions+=b
     else
-        set guifont=DejaVu\ Sans\ Mono\ 9
+        set guifont=DejaVu\ Sans\ Mono\ 10
     endif
 else
     set wrap
 endif
 
 au FileReadPost,FileWritePre *.cpp,*.hpp,*.cc,*.c,*.h,*.cxx retab
-au BufReadPre,FileReadPre,BufNewFile *.rb,*.erb,*.*htm*,*.*ml,*.js,*.jade,*.css,*.styl set tabstop=2 shiftwidth=2
+au BufReadPre,FileReadPre,BufNewFile *.coffee,*.rb,*.erb,*.*htm*,*.*ml,*.js,*.jade,*.css,*.styl set tabstop=2 shiftwidth=2
+
+set fdm=indent
+
+execute pathogen#infect()
