@@ -24,7 +24,7 @@ inoremap <leader>q ''<esc>:let leavechar="'"<cr>i
 inoremap <leader>w ""<esc>:let leavechar='"'<cr>i
 
 " ICPC Ä£°å
-nmap <leader>cc :r~/.vim-icpctmpl.cc<cr>kdd
+nmap <leader>cc :r~/.vim/templates/icpc.cc<cr>kdd
 
 " ËõÐ´
 iab idate <c-r>=strftime("%Y-%m-%d")<CR>
