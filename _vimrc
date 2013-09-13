@@ -122,7 +122,7 @@ else
 endif
 
 au FileReadPost,FileWritePre *.cpp,*.hpp,*.cc,*.c,*.h,*.cxx retab
-au BufReadPre,FileReadPre,BufNewFile *.coffee,*.rb,*.erb,*.*htm*,*.*ml,*.js,*.jade,*.css,*.styl set tabstop=2 shiftwidth=2
+au BufReadPre,FileReadPre,BufNewFile *.coffee,*.rb,*.erb,*.*htm*,*.*ml,*.js,*.jade,*.css,*.styl,*.json set tabstop=2 shiftwidth=2
 
 set fdm=indent
 
