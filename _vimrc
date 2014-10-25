@@ -10,6 +10,9 @@ nmap <leader>wq :wq<cr>
 nmap <leader>sh :shell<cr>
 nmap <leader>bn :bn<cr>
 nmap <leader>bp :bp<cr>
+nmap <leader>bd :bp\|bd #<cr>
+nmap <leader>nt :NERDTree<cr>
+nmap <leader>f <C-W><C-W>
 nn <C-J> :bn<cr>
 nn <C-K> :bp<cr>
 imap <C-e> <END>
@@ -104,7 +107,8 @@ set wildmenu                        " 命令自动补全时使用一个目录显示候选项
 if (g:isgui)
     if (g:iswin)
         " set guifont=Yahei_Consolas_Hybrid:h13
-        set guifont=Yahei_Mono:h9
+        " set guifont=Yahei_Mono:h9
+        set guifont=Consolas:h11
 
         " 以下脚本能够有效地使 Windows 中 gVim 的菜单栏正确显示
         language message zh_CN.UTF-8
@@ -124,6 +128,10 @@ endif
 au FileReadPost,FileWritePre *.cpp,*.hpp,*.cc,*.c,*.h,*.cxx retab
 au BufReadPre,FileReadPre,BufNewFile *.coffee,*.rb,*.erb,*.*htm*,*.*ml,*.js,*.jade,*.css,*.styl,*.json set tabstop=2 shiftwidth=2
 
+" 设置折叠格式为按照缩进折叠 zM zR
 set fdm=indent
+
+" 默认不折叠
+au BufRead,BufWinEnter * normal zR
 
 execute pathogen#infect()

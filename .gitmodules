@@ -10,3 +10,9 @@
 [submodule "_vim/bundle/vim-css3-syntax"]
 	path = _vim/bundle/vim-css3-syntax
 	url = https://github.com/hail2u/vim-css3-syntax.git
+[submodule "_vim/bundle/nerdtree"]
+	path = _vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "_vim/bundle/vim-better-whitespace"]
+	path = _vim/bundle/vim-better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace.git
