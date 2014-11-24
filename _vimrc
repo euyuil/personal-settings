@@ -13,6 +13,7 @@ nmap <leader>bp :bp<cr>
 nmap <leader>bd :bp\|bd #<cr>
 nmap <leader>nt :NERDTree<cr>
 nmap <leader>f <C-W><C-W>
+nmap <leader>j <C-W><C-W>
 nn <C-J> :bn<cr>
 nn <C-K> :bp<cr>
 imap <C-e> <END>
