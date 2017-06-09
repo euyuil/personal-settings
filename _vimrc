@@ -104,6 +104,8 @@ set keymodel=                       " 不使用 Shift 加方向键来选择文本
 set selection=inclusive             " 光标所在位置也加入选区
 set wildmenu                        " 命令自动补全时使用一个目录显示候选项
 
+hi Normal ctermbg=none
+
 " 平台相关的设置
 if (g:isgui)
     if (g:iswin)
