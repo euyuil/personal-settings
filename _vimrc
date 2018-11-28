@@ -2,7 +2,7 @@
 " Based on http://mail.ustc.edu.cn/~stephen1/script/vimrc.html
 " Last Update: 2011-04-11
 
-" ¼üÅÌ¿ì½İ¼üÓ³Éä
+" é”®ç›˜å¿«æ·é”®æ˜ å°„
 let mapleader=";"
 nmap <space> :
 nmap <leader>ww :w!<cr>
@@ -19,7 +19,7 @@ nn <C-K> :bp<cr>
 imap <C-e> <END>
 imap <C-a> <HOME>
 
-" ×Ô¶¯Íê³ÉÀ¨ºÅºÍÒıºÅ
+" è‡ªåŠ¨å®Œæˆæ‹¬å·å’Œå¼•å·
 inoremap <leader>1 ()<esc>:let leavechar=")"<cr>i
 inoremap <leader>2 []<esc>:let leavechar="]"<cr>i
 inoremap <leader>3 {}<esc>:let leavechar="}"<cr>i
@@ -27,10 +27,10 @@ inoremap <leader>4 {<esc>o}<esc>:let leavechar="}"<cr>O
 inoremap <leader>q ''<esc>:let leavechar="'"<cr>i
 inoremap <leader>w ""<esc>:let leavechar='"'<cr>i
 
-" ICPC Ä£°å
+" ICPC æ¨¡æ¿
 nmap <leader>cc :r~/.vim/templates/icpc.cc<cr>kdd
 
-" ËõĞ´
+" ç¼©å†™
 iab idate <c-r>=strftime("%Y-%m-%d")<CR>
 iab itime <c-r>=strftime("%H:%M")<CR>
 iab imail EUYUIL <contact@euyuil.com>
@@ -41,84 +41,84 @@ iab iname EUYUIL
 iab #i #include
 iab #d #define
 
-" Ô¤ÏÈ×¼±¸²Ù×÷ÏµÍ³±ê¼Ç
+" é¢„å…ˆå‡†å¤‡æ“ä½œç³»ç»Ÿæ ‡è®°
 if (has("win32") || has("win64") || has("win32unix"))
     let g:iswin=1
 else
     let g:iswin=0
 endif
 
-" Ô¤ÏÈ×¼±¸Í¼ĞÎ»¯½çÃæ±ê¼Ç
+" é¢„å…ˆå‡†å¤‡å›¾å½¢åŒ–ç•Œé¢æ ‡è®°
 if has("gui_running")
     let g:isgui=1
 else
     let g:isgui=0
 endif
 
-" ĞĞÎªºÍÍâ¹ÛÉèÖÃ
-set nocompatible                    " ¹Ø±Õ¶Ô Vi µÄ¼æÈİÖ§³Ö
-colorscheme torte                   " ÉèÖÃÅäÉ«·½°¸Îª torte
-set nobackup                        " ÒòÎªÏÖÔÚ°æ±¾¿ØÖÆ´óĞĞÆäµÀ£¬ËùÒÔ²»ÓÃ±¸·İÁË
-set ruler                           " ÏÔÊ¾±ê³ß
-set ignorecase                      " ËÑË÷Ê±ºöÂÔ´óĞ¡Ğ´
-set hlsearch                        " ¸ßÁÁËÑË÷¹Ø¼ü´Ê
-set incsearch                       " ´ò¿ªÔöÁ¿ËÑË÷£¬¼´¹Ø¼ü´ÊÎ´ÊäÈëÍê³É¾ÍÏÔÊ¾½á¹û
-syntax on                           " ´ò¿ªÓï·¨¸ßÁÁ£¬²»¿ª»áËÀÈËµÄ
-set backspace=indent,eol,start      " ÉèÖÃ Backspace µÄÏ°¹ß
-set whichwrap=b,s,<,>,[,]           " ÉèÖÃ·½Ïò¼ü¿ÉÒÔµ½ÉÏÒ»ĞĞ»òÏÂÒ»ĞĞ
-set ambiwidth=double                " ÈÃÈ«½Ç×Ö·ûÄÜ¹»ÕıÈ·ÏÔÊ¾£¿
-filetype plugin indent on           " ×Ô¶¯ÅĞ¶ÏÎÄ¼şÀàĞÍºÍËõ½ø
-set number                          " ÏÔÊ¾ĞĞºÅ
-set lz                              " µ±ÔËĞĞºêÃüÁîÖ´ĞĞÍê³ÉÖ®Ç°£¬²»ÖØ»æÆÁÄ»
-set hid                             " ¿ÉÒÔÔÚÃ»ÓĞ±£´æµÄÇé¿öÏÂÇĞ»»»º³åÇø
-set showcmd                         " ÏÔÊ¾ÃüÁî
-set vb t_vb=                        " ²»Ê¹ÓÃ Beep »ò Flash
-set history=1024                    " ÀúÊ·¼ÇÂ¼ÌõÊı£¬Ä¬ÈÏÊÇ 20
-set autoread                        " µ±ÎÄ¼şÔÚÍâ²¿±»ĞŞ¸ÄÊ±£¬×Ô¶¯ÖØĞÂ¶ÁÈ¡
-set mouse=a                         " ÔÚËùÓĞÄ£Ê½ÏÂÔÊĞíÊ¹ÓÃÊó±ê
+" è¡Œä¸ºå’Œå¤–è§‚è®¾ç½®
+set nocompatible                    " å…³é—­å¯¹ Vi çš„å…¼å®¹æ”¯æŒ
+colorscheme torte                   " è®¾ç½®é…è‰²æ–¹æ¡ˆä¸º torte
+set nobackup                        " å› ä¸ºç°åœ¨ç‰ˆæœ¬æ§åˆ¶å¤§è¡Œå…¶é“ï¼Œæ‰€ä»¥ä¸ç”¨å¤‡ä»½äº†
+set ruler                           " æ˜¾ç¤ºæ ‡å°º
+set ignorecase                      " æœç´¢æ—¶å¿½ç•¥å¤§å°å†™
+set hlsearch                        " é«˜äº®æœç´¢å…³é”®è¯
+set incsearch                       " æ‰“å¼€å¢é‡æœç´¢ï¼Œå³å…³é”®è¯æœªè¾“å…¥å®Œæˆå°±æ˜¾ç¤ºç»“æœ
+syntax on                           " æ‰“å¼€è¯­æ³•é«˜äº®ï¼Œä¸å¼€ä¼šæ­»äººçš„
+set backspace=indent,eol,start      " è®¾ç½® Backspace çš„ä¹ æƒ¯
+set whichwrap=b,s,<,>,[,]           " è®¾ç½®æ–¹å‘é”®å¯ä»¥åˆ°ä¸Šä¸€è¡Œæˆ–ä¸‹ä¸€è¡Œ
+set ambiwidth=double                " è®©å…¨è§’å­—ç¬¦èƒ½å¤Ÿæ­£ç¡®æ˜¾ç¤ºï¼Ÿ
+filetype plugin indent on           " è‡ªåŠ¨åˆ¤æ–­æ–‡ä»¶ç±»å‹å’Œç¼©è¿›
+set number                          " æ˜¾ç¤ºè¡Œå·
+set lz                              " å½“è¿è¡Œå®å‘½ä»¤æ‰§è¡Œå®Œæˆä¹‹å‰ï¼Œä¸é‡ç»˜å±å¹•
+set hid                             " å¯ä»¥åœ¨æ²¡æœ‰ä¿å­˜çš„æƒ…å†µä¸‹åˆ‡æ¢ç¼“å†²åŒº
+set showcmd                         " æ˜¾ç¤ºå‘½ä»¤
+set vb t_vb=                        " ä¸ä½¿ç”¨ Beep æˆ– Flash
+set history=1024                    " å†å²è®°å½•æ¡æ•°ï¼Œé»˜è®¤æ˜¯ 20
+set autoread                        " å½“æ–‡ä»¶åœ¨å¤–éƒ¨è¢«ä¿®æ”¹æ—¶ï¼Œè‡ªåŠ¨é‡æ–°è¯»å–
+set mouse=a                         " åœ¨æ‰€æœ‰æ¨¡å¼ä¸‹å…è®¸ä½¿ç”¨é¼ æ ‡
 
-" ÎÄ×Ö±àÂëÉèÖÃ
+" æ–‡å­—ç¼–ç è®¾ç½®
 set encoding=utf-8
 set fileencodings=ucs_bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
-" Ëõ½øÉèÖÃ
-set autoindent                      " ÉèÖÃ×Ô¶¯Ëõ½ø
-set smartindent                     " ÉèÖÃÖÇÄÜËõ½ø
-set shiftwidth=4                    " ÒÔ 4 ¸ö¿Õ¸ñÎª 1 ¸öËõ½ø
-set tabstop=4                       " Ò»¸ö Tab Õ¼ 4 ¸ö¿Õ¸ñ
-set expandtab                       " Ä¬ÈÏ½«ĞÂÊäÈëµÄ Tab Ìæ»»Îª¿Õ¸ñ
-set smarttab                        " Èç¹ûÓÃ¿Õ¸ñËõ½ø£¬Ò»¹ÉÄÔÉ¾³ı 4 ¸ö¿Õ¸ñ
+" ç¼©è¿›è®¾ç½®
+set autoindent                      " è®¾ç½®è‡ªåŠ¨ç¼©è¿›
+set smartindent                     " è®¾ç½®æ™ºèƒ½ç¼©è¿›
+set shiftwidth=4                    " ä»¥ 4 ä¸ªç©ºæ ¼ä¸º 1 ä¸ªç¼©è¿›
+set tabstop=4                       " ä¸€ä¸ª Tab å  4 ä¸ªç©ºæ ¼
+set expandtab                       " é»˜è®¤å°†æ–°è¾“å…¥çš„ Tab æ›¿æ¢ä¸ºç©ºæ ¼
+set smarttab                        " å¦‚æœç”¨ç©ºæ ¼ç¼©è¿›ï¼Œä¸€è‚¡è„‘åˆ é™¤ 4 ä¸ªç©ºæ ¼
 
-" ¶ÏĞĞÉèÖÃ
-" set tw=78                           " ¹â±ê³¬¹ı 78 ÁĞÊ±¶ÏĞĞ
-set lbr                             " ¾¡Á¿²»ÔÚµ¥´ÊÖĞ¶ÏĞĞ
-set fo+=mB                          " ÖĞÎÄ×Ö·û¿ÉÒÔÇĞ¶Ï£¬²¢ÇÒÖĞÎÄÖ®¼ä²»ÓÃ²¹¿Õ¸ñ
+" æ–­è¡Œè®¾ç½®
+" set tw=78                           " å…‰æ ‡è¶…è¿‡ 78 åˆ—æ—¶æ–­è¡Œ
+set lbr                             " å°½é‡ä¸åœ¨å•è¯ä¸­æ–­è¡Œ
+set fo+=mB                          " ä¸­æ–‡å­—ç¬¦å¯ä»¥åˆ‡æ–­ï¼Œå¹¶ä¸”ä¸­æ–‡ä¹‹é—´ä¸ç”¨è¡¥ç©ºæ ¼
 
-" C/C++ µÄ¸ñÊ½ÉèÖÃ
-set showmatch                       " ÏÔÊ¾À¨ºÅÆ¥ÅäÇé¿ö
-set cindent                         " ×Ô¶¯Ëõ½ø£¬Ñ¡ÖĞÊ±°´µÈºÅ¿ÉÒÔµ÷Õû¸ñÊ½£¿
+" C/C++ çš„æ ¼å¼è®¾ç½®
+set showmatch                       " æ˜¾ç¤ºæ‹¬å·åŒ¹é…æƒ…å†µ
+set cindent                         " è‡ªåŠ¨ç¼©è¿›ï¼Œé€‰ä¸­æ—¶æŒ‰ç­‰å·å¯ä»¥è°ƒæ•´æ ¼å¼ï¼Ÿ
 set cino=:0g0t0(sus
 
-" ÔÓÏîÉèÖÃ
-set keymodel=                       " ²»Ê¹ÓÃ Shift ¼Ó·½Ïò¼üÀ´Ñ¡ÔñÎÄ±¾
-set selection=inclusive             " ¹â±êËùÔÚÎ»ÖÃÒ²¼ÓÈëÑ¡Çø
-set wildmenu                        " ÃüÁî×Ô¶¯²¹È«Ê±Ê¹ÓÃÒ»¸öÄ¿Â¼ÏÔÊ¾ºòÑ¡Ïî
+" æ‚é¡¹è®¾ç½®
+set keymodel=                       " ä¸ä½¿ç”¨ Shift åŠ æ–¹å‘é”®æ¥é€‰æ‹©æ–‡æœ¬
+set selection=inclusive             " å…‰æ ‡æ‰€åœ¨ä½ç½®ä¹ŸåŠ å…¥é€‰åŒº
+set wildmenu                        " å‘½ä»¤è‡ªåŠ¨è¡¥å…¨æ—¶ä½¿ç”¨ä¸€ä¸ªç›®å½•æ˜¾ç¤ºå€™é€‰é¡¹
 
 hi Normal ctermbg=none
 
-" Æ½Ì¨Ïà¹ØµÄÉèÖÃ
+" å¹³å°ç›¸å…³çš„è®¾ç½®
 if (g:isgui)
     if (g:iswin)
         " set guifont=Yahei_Consolas_Hybrid:h13
         " set guifont=Yahei_Mono:h9
         set guifont=Consolas:h11
 
-        " ÒÔÏÂ½Å±¾ÄÜ¹»ÓĞĞ§µØÊ¹ Windows ÖĞ gVim µÄ²Ëµ¥À¸ÕıÈ·ÏÔÊ¾
+        " ä»¥ä¸‹è„šæœ¬èƒ½å¤Ÿæœ‰æ•ˆåœ°ä½¿ Windows ä¸­ gVim çš„èœå•æ æ­£ç¡®æ˜¾ç¤º
         language message zh_CN.UTF-8
         source $VIMRUNTIME/delmenu.vim
         set langmenu=zh_CN.UTF-8
 
-        " ÈôÊÇÍ¼ĞÎ½çÃæÔòÎŞĞè¶ÏĞĞ£¬»¹¿ÉÒÔÏÔÊ¾Ë®Æ½¹ö¶¯Ìõ
+        " è‹¥æ˜¯å›¾å½¢ç•Œé¢åˆ™æ— éœ€æ–­è¡Œï¼Œè¿˜å¯ä»¥æ˜¾ç¤ºæ°´å¹³æ»šåŠ¨æ¡
         set nowrap
         set guioptions+=b
     else
@@ -131,10 +131,14 @@ endif
 au FileReadPost,FileWritePre *.cpp,*.hpp,*.cc,*.c,*.h,*.cxx retab
 au BufReadPre,FileReadPre,BufNewFile *.coffee,*.rb,*.erb,*.*htm*,*.*ml,*.js,*.jade,*.css,*.styl,*.json set tabstop=2 shiftwidth=2
 
-" ÉèÖÃÕÛµş¸ñÊ½Îª°´ÕÕËõ½øÕÛµş zM zR
+" è®¾ç½®æŠ˜å æ ¼å¼ä¸ºæŒ‰ç…§ç¼©è¿›æŠ˜å  zM zR
 set fdm=indent
 
-" Ä¬ÈÏ²»ÕÛµş
+" é»˜è®¤ä¸æŠ˜å 
 au BufRead,BufWinEnter * normal zR
 
 execute pathogen#infect()
+
+set listchars=eol:\ ,tab:>-,trail:~,extends:>,precedes:<
+set list
+nnoremap <F3> :set list!<CR>
