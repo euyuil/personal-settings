@@ -57,7 +57,6 @@ endif
 
 " 行为和外观设置
 set nocompatible                    " 关闭对 Vi 的兼容支持
-colorscheme torte                   " 设置配色方案为 torte
 set nobackup                        " 因为现在版本控制大行其道，所以不用备份了
 set ruler                           " 显示标尺
 set ignorecase                      " 搜索时忽略大小写
